@@ -21,11 +21,16 @@
     <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+    
+    <meta 
+        name="amp-script-src"
+        content="sha384-OLBgp1GsljhM2TJ-sbHjaiH9txEUvgdDTAzHv2P24donTt6_529l-9Ua0vFImLlb"
+    >
   </head>
   <body>
     <h1>Welcome to the mobile web</h1>
     <div>
-      <amp-script layout="container" script="dsq-count-scr">
+      <amp-script layout="container" src="//hovseptestrealm.disqus.com/count.js">
         <a href="#disqus_thread" data-disqus-identifier="hovsep-external-test">TEST COMMENT COUNT</a>
       </amp-script>
     </div>
@@ -45,6 +50,5 @@
       </amp-iframe>
     </div>
     
-    <script id="dsq-count-scr" src="//hovseptestrealm.disqus.com/count.js" target="amp-script" async></script>
   </body>
 </html>
