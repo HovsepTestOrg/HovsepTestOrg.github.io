@@ -24,13 +24,13 @@
     
     <meta 
         name="amp-script-src"
-        content="sha384-LatLWRn4HMnzWjD8vBLuRVxWSWkaaGyt_RgrdT3KvQ34FYDA_2HQCgAkC2hnrvqh"
+        content="sha384-gQeuwxTAANRSWbLzV-VKKTSjUd4kFZJyGjpRv8IBjY25FBUSjSMwXXOJbbL6b4uy"
     >
   </head>
   <body>
     <h1>Welcome to the mobile web</h1>
     <div>
-      <amp-script script="count-loader">
+      <amp-script src="//hovseptestrealm.disqus.com/count.js" layout="fixed-height" height="20" id="dsq-count-scr">
         <a href="#disqus_thread" data-disqus-identifier="hovsep-external-test">TEST COMMENT COUNT</a>
       </amp-script>
     </div>
@@ -50,11 +50,5 @@
       </amp-iframe>
     </div>
     
-    <script id="count-loader" type="text/plain" target="amp-script">
-      var script = document.createElement('script');
-      script.src = 'https://hovseptestrealm.disqus.com/count.js';
-      script.id = 'dsq-count-scr';
-      document.appendChild(script);
-    </script>
   </body>
 </html>
