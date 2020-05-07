@@ -21,6 +21,7 @@
     <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     
     <meta 
         name="amp-script-src"
@@ -29,12 +30,58 @@
   </head>
   <body>
     <h1>Welcome to the mobile web</h1>
+    
+    
+    
     <div>
-      <amp-script src="//hovseptestrealm.disqus.com/count.js" >
+      <amp-script src="//hovseptestrealm.disqus.com/count-data.json?identifier=hovsep-external-test" >
         <div id="dsq-count-scr" data-url="//hovseptestrealm.disqus.com/count.js" />
         <a href="#disqus_thread" data-disqus-identifier="hovsep-external-test">TEST COMMENT COUNT</a>
       </amp-script>
     </div>
+    
+    <div>
+      <amp-script src="//hovseptestrealm.disqus.com/count-data.json?url=https://hovspian.github.io/disqus-amp/" >
+        <div id="dsq-count-scr" data-url="//hovseptestrealm.disqus.com/count.js" />
+        <a href="#disqus_thread" data-disqus-identifier="hovsep-external-test">TEST COMMENT COUNT</a>
+      </amp-script>
+    </div>
+    
+    <div>
+      amp-list with url:
+      <amp-list
+        width="auto"
+        height="100"
+        layout="fixed-height"
+        src="//hovseptestrealm.disqus.com/count-data.json?url=https://hovspian.github.io/disqus-amp/"
+      >
+        <template type="amp-mustache">
+
+          <div class="url-entry">
+            <a href="{{url}}">{{comments}}</a>
+          </div>
+        </template>
+      </amp-list>
+    </div>
+    
+    <div>
+      amp-list with identifier:
+      <amp-list
+        width="auto"
+        height="100"
+        layout="fixed-height"
+        src="//hovseptestrealm.disqus.com/count-data.json?identifier=hovsep-external-test"
+      >
+        <template type="amp-mustache">
+
+          <div class="url-entry">
+            <a href="{{url}}">{{comments}}</a>
+          </div>
+        </template>
+      </amp-list>
+    </div>
+    
+    
     <amp-img src="welcome.jpg" alt="Welcome" height="800" width="800"></amp-img>
     <div height=800 padding=800 >Hi</div>
     <div height=800 padding=800 >Hi</div>
