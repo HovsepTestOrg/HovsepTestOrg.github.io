@@ -29,13 +29,13 @@
     <div>
       amp-list with url:
       <amp-list
-        layout="fill"
+        layout="container"
         src="//hovseptestrealm.disqus.com/count-data.json?url=https://hovspian.github.io/disqus-amp/&identifier=testembed"
       >
         <template type="amp-mustache">
-          <span>
+          <div>
             <a href="{{url}}">{{comments}} comments</a>
-          </span>
+          </div>
         </template>
       </amp-list>
     </div>
