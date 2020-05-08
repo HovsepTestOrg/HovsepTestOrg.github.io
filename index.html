@@ -29,15 +29,15 @@
     <div>
       amp-list with url:
       <amp-list
-        width="100"
+        width="auto"
         height="20"
-        layout="responsive"
+        layout="fixed-height"
         src="//hovseptestrealm.disqus.com/count-data.json?url=https://hovspian.github.io/disqus-amp/&identifier=testembed"
       >
         <template type="amp-mustache">
-          <div>
+          <span>
             <a href="{{url}}">{{comments}} comments</a>
-          </div>
+          </span>
         </template>
       </amp-list>
     </div>
@@ -46,7 +46,7 @@
       amp-list with identifier:
       <amp-list
         width="auto"
-        height="100"
+        height="20"
         layout="fixed-height"
         src="//hovseptestrealm.disqus.com/count-data.json?identifier=hovsep-external-test&identifier=testembed"
       >
